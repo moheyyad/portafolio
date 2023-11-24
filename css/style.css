@@ -1,0 +1,229 @@
+:root{
+    --dark: #151515;
+    --light: #222222;
+    --orng:#ff8d2d;
+}
+body{
+    background-color: var(--dark);
+    font-family: 'Cairo', sans-serif;
+    font-weight: 700;
+}
+.logo{
+    width: 40px;
+    height: 40px;
+    background-color: var(--l);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 12px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.navbar{
+    background-color: var(--dark);
+}
+.navbar li a.active{
+    color: var(--orng) !important;
+}
+.navbar :where(a, li){
+    color: #fff;
+}
+.navbar a{
+    transition-duration: .3s;
+    transition-property: all;
+}
+.navbar a:not(.active,.navbar-brand):hover{
+    color: var(--orng) ;
+    transform: translateY(5px);
+}
+.navbar-brand:hover{
+    color: #fff;
+}
+.kyal{
+    position: absolute;
+    top: 30px;
+    right: 0px;;
+    height: 400px;
+    z-index: -1;
+}
+.kyal img{
+    filter: grayscale(1);
+    margin: 9vw;
+    height: 100%;
+    /* border-bottom: 5px solid var(--orng); */
+}
+.txt{
+    margin: 10rem;
+}
+.txt h1{
+    letter-spacing: .3rem;
+    text-transform: uppercase;
+    word-spacing: .3rem;
+    font-weight: 900;
+    font-size: 2.4rem;
+}
+.txt h2{
+    /* font-family: cursive; */
+    letter-spacing: .2rem;
+    word-spacing: .3rem;
+    font-weight: 400;
+}
+.txt span{
+    color: var(--orng);
+
+}
+.txt p{
+    width: 40vw;
+    font-size: 1.1rem;
+    line-height: 1.6rem;
+    font-weight: 400;
+}
+.txt a{
+    margin: 1rem 2rem 1rem 0;
+    font-size: 1.6vw;
+    word-spacing: 5px;
+    transition-property: all;
+    transition-duration: .3s;
+}
+.txt .a1{
+    background-color: var(--orng);
+    border: 2px solid var(--orng);
+}
+.txt .a1:hover{
+    background-color: transparent;
+    color: var(--orng) !important;}
+.txt .a2{
+    border: 2px solid var(--orng);
+    color: var(--orng);
+}
+.txt .a2:hover{
+    background-color: var(--orng);
+    color: #fff;
+}
+.main-title h2{
+    color: var(--orng);
+    font-weight: 800;
+    letter-spacing: 2px;
+}
+.work .box{
+    background-color: var(--light);
+    padding: 5px;
+    overflow: hidden;
+    position: relative;
+}
+.work .box::before{
+    content: attr(data-work);
+    position: absolute;
+    background-color: #ff8d2db3;
+    width: calc(100% - 10px);
+    height: calc(100% - 10px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 700;
+    color: #fff;
+    transition: .3s;
+    font-size: 1.2rem;
+    transform: translateX(calc(-100% - 5px));
+}
+.work .box:hover::before{
+    transform: translateX(0);
+}
+.work a{
+    font-size: 21px;
+    word-spacing: 5px;
+    transition-property: all;
+    transition-duration: .3s;
+    background-color: var(--orng);
+    border: 2px solid var(--orng);
+    width: 300px;
+}
+.work a:hover{
+    background-color: transparent;
+    color: var(--orng) !important;
+    border: 2px solid var(--orng);
+}
+.box{
+    box-shadow: 0px 0px 16px 0px #00000082;
+}
+.serv1:not(.not){
+    border-right: 2px solid var(--light);
+}
+.serv1 i{
+    color: var(--orng);
+    border: 2px solid var(--orng);
+    border-radius: 50%;
+    padding: 10px;
+    margin: 30px;
+    font-size: 25px;
+}
+.serv1 h5{
+    margin: 0 0 20px 0;
+}
+.serv1 span{
+    color: var(--orng);
+}
+.serv1 p{
+    margin: 0 40px 50px 40px;
+}
+
+.social{
+    background-color: var(--light);
+    color: var(--orng);
+}
+.social i{
+    font-size: 35px;
+    margin: 20px;
+    padding: 24px 30px;
+    border: 2px solid var(--orng);
+    border-radius: 50%;
+}
+
+.wrapper .but{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    float: left;
+    margin: 0 5px;
+    background: var(--light);
+    color: #fff;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all .3s ease-out;
+    overflow: hidden;
+    box-shadow: rgb(1 1 1 / 20%) 0px 0px 10px;
+}
+.wrapper .but:hover{
+    width: 200px;
+
+}
+.wrapper .but:hover .icon{
+    background-color: var(--orng);
+}
+.wrapper .but .icon{
+    display: inline-block;
+    height: 60px;
+    width: 60px;
+    text-align: center;
+    border-radius: 50%;
+    box-sizing: border-box;
+    line-height: 60px;
+    transition: all .3s ease-out;
+
+}
+.wrapper .but .icon i{
+    font-size: 25px;
+    line-height: 60px;
+}
+.wrapper .but:hover .icon i{
+    color: var(--dark);
+}
+.wrapper .but span{
+    font-size: 20px;
+    line-height: 60px;
+    margin-left: 10px;
+    transition: all .3s ease-out;
+}
+.wrapper .but:hover span{
+    color: var(--orng);
+}
