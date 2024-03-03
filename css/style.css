@@ -1,6 +1,7 @@
 :root{
     --dark: #151515;
-    --light: #222222;
+    --light: #eee;
+    --gray: #222222;
     --orng:#ff8d2d;
 }
 body{
@@ -8,6 +9,11 @@ body{
     font-family: 'Cairo', sans-serif;
     font-weight: 700;
 }
+.lightBody{
+    background-color: var(--light);
+    color: var(--dark);
+}
+
 .logo{
     width: 40px;
     height: 40px;
@@ -50,10 +56,12 @@ body{
     filter: grayscale(1);
     margin: 9vw;
     height: 100%;
-    /* border-bottom: 5px solid var(--orng); */
 }
 .txt{
     margin: 10rem;
+}
+.lightTxt{
+    color: var(--dark) !important;
 }
 .txt h1{
     letter-spacing: .3rem;
@@ -62,7 +70,6 @@ body{
     font-weight: 900;
 }
 .txt h2{
-    /* font-family: cursive; */
     letter-spacing: .2rem;
     word-spacing: .3rem;
     font-weight: 400;
@@ -99,13 +106,23 @@ body{
     background-color: var(--orng);
     color: #fff;
 }
+
+
 .main-title h2{
     color: var(--orng);
     font-weight: 800;
     letter-spacing: 2px;
 }
+.lightMain h2{
+    color: var(--dark) !important;
+}
+
+.lightMain p{
+    color: var(--orng) !important;
+}
+
 .work .box{
-    background-color: var(--light);
+    background-color: var(--gray);
     padding: 5px;
     overflow: hidden;
     position: relative;
@@ -145,10 +162,13 @@ body{
 .box{
     box-shadow: 0px 0px 16px 0px #00000082;
 }
-.serv1:not(.not){
-    border-right: 2px solid var(--light);
+.serv:not(.not){
+    border-right: 2px solid var(--gray);
 }
-.serv1 i{
+.lightServ:not(.not){
+    border-right: 2px solid var(--orng);
+}
+.serv i{
     color: var(--orng);
     border: 2px solid var(--orng);
     border-radius: 50%;
@@ -156,18 +176,27 @@ body{
     margin: 30px;
     font-size: 25px;
 }
-.serv1 h5{
+.lightServ i{
+    color: var(--orng);
+    border: 2px solid var(--orng);
+
+}
+.serv h5{
     margin: 0 0 20px 0;
 }
-.serv1 span{
+.lightServ h5,
+.lightServ p{
+    color: var(--gray) !important;
+}
+.serv span{
     color: var(--orng);
 }
-.serv1 p{
+.serv p{
     margin: 0 40px 50px 40px;
 }
 
 .social{
-    background-color: var(--light);
+    background-color: var(--gray);
     color: var(--orng);
 }
 .social i{
@@ -184,7 +213,7 @@ body{
     width: 60px;
     float: left;
     margin: 0 5px;
-    background: var(--light);
+    background: var(--gray);
     color: #fff;
     border-radius: 50px;
     cursor: pointer;
@@ -242,6 +271,12 @@ body{
     border-radius: 10px;
     animation: appire 1s, disappire 1s 7s forwards;
 }
+.lightMark{
+    color: var(--gray);   
+    background-color: var(--light);
+    border: 1px solid #555;
+
+}
 @keyframes appire{
     from{
         right: -1000px;
@@ -280,7 +315,6 @@ body{
 }
 .myMark span{
     color: var(--orng);
-    /* font-style: italic; */
     font-weight: 900;
 }
 
@@ -303,10 +337,11 @@ body{
         width: 65vw;
         font-size: 1rem;
     }
-    .txt a{
-        margin: 1rem 1rem 1rem 0;
+    .txt a {
+        margin: 1rem 10px 1rem 0;
         font-size: 3vw;
-    }
+        padding: 7px 15px !important;
+      }
     .myMark h5{
         font-size: 15px;
     }
